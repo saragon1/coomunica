@@ -1,24 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, MapPin, Phone, ArrowRight } from 'react-feather';
 import Logo from './Logo';
 
 const Footer: React.FC = () => {
-    const navLinks = [
-        { to: '/', label: 'Home' },
-        { to: '/chi-siamo', label: 'Chi Siamo' },
-        { to: '/servizi', label: 'Servizi' },
-        { to: '/portfolio', label: 'Portfolio' },
-        { to: '/curriculum', label: 'Curriculum' },
-        { to: '/contatti', label: 'Contatti' },
-    ];
-
-    const contactInfo = [
-        { icon: <Mail className="w-5 h-5" />, label: 'Email', value: 'info@coomunica.it' },
-        { icon: <Phone className="w-5 h-5" />, label: 'Telefono', value: '+39 123 456 7890' },
-        { icon: <MapPin className="w-5 h-5" />, label: 'Indirizzo', value: 'Via Roma 123, Milano' },
-    ];
-
     return (
         <footer className="bg-secondary-900 text-white relative overflow-hidden">
             {/* Background Pattern */}

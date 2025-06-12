@@ -1,15 +1,5 @@
 import React from 'react';
-import { Mail, MapPin, Phone, MessageCircle } from 'react-feather';
-
-const ContactCard: React.FC<{ icon: React.ReactNode; title: string; content: React.ReactNode; }> = ({ icon, title, content }) => (
-    <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg card-hover border border-white/20">
-        <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center mb-6">
-            {icon}
-        </div>
-        <h3 className="text-xl font-bold text-secondary-900 mb-4">{title}</h3>
-        <div className="text-secondary-600 leading-relaxed">{content}</div>
-    </div>
-);
+import { MapPin } from 'react-feather';
 
 const Contacts: React.FC = () => {
     return (
@@ -33,55 +23,54 @@ const Contacts: React.FC = () => {
 
                     <div className="grid lg:grid-cols-2 gap-12 items-start max-w-7xl mx-auto">
                         {/* Contact Info */}
-                        <div className="space-y-8">
-                            <ContactCard
-                                icon={<Mail className="w-8 h-8 text-white" />}
-                                title="Email"
-                                content={
-                                    <a 
-                                        href="mailto:info@coomunica.it" 
-                                        className="text-lg font-medium text-primary-600 hover:text-primary-700 transition-colors"
-                                    >
-                                        info@coomunica.it
-                                    </a>
-                                }
-                            />
-                            
-                            <ContactCard
-                                icon={<MapPin className="w-8 h-8 text-white" />}
-                                title="Sede Legale"
-                                content={
-                                    <div className="text-lg">
-                                        <p className="font-medium text-secondary-800">Via Dei Castani, 183</p>
-                                        <p className="text-secondary-600">00172 ROMA</p>
+                        <div className="space-y-6">
+                            {/* Email Card */}
+                            <div className="group relative overflow-hidden bg-gradient-to-br from-white to-gray-50/50 rounded-3xl p-8 border border-gray-200/50 hover:border-primary-300/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/10">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-500/10 to-primary-600/5 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
+                                <div className="relative z-10">
+                                    <div>
+                                        <h3 className="text-lg font-bold text-secondary-900 mb-3">Email</h3>
+                                        <a 
+                                            href="mailto:info@coomunica.it" 
+                                            className="text-2xl font-semibold text-primary-600 hover:text-primary-700 transition-colors duration-300 group-hover:underline"
+                                        >
+                                            info@coomunica.it
+                                        </a>
+                                        <p className="text-sm text-secondary-500 mt-2">Scrivici per qualsiasi informazione</p>
                                     </div>
-                                }
-                            />
+                                </div>
+                            </div>
                             
-                            <ContactCard
-                                icon={<MapPin className="w-8 h-8 text-white" />}
-                                title="Sede Operativa"
-                                content={
-                                    <div className="text-lg">
-                                        <p className="font-medium text-secondary-800">Via Vallerotonda, 13</p>
-                                        <p className="text-secondary-600">00178 ROMA</p>
+                            {/* Sede Legale Card */}
+                            <div className="group relative overflow-hidden bg-gradient-to-br from-white to-primary-50/30 rounded-3xl p-8 border border-gray-200/50 hover:border-primary-300/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/10">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-500/10 to-primary-600/5 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
+                                <div className="relative z-10">
+                                    <div className="flex items-start space-x-4">
+                                        <div className="flex-1">
+                                            <h3 className="text-lg font-bold text-secondary-900 mb-3">Sede Legale</h3>
+                                            <div className="space-y-1">
+                                                <p className="text-xl font-semibold text-secondary-800">Via Dei Castani, 183</p>
+                                                <p className="text-lg text-secondary-600 font-medium">00172 ROMA</p>
+                                            </div>
+                                            <p className="text-sm text-secondary-500 mt-2">Sede legale e amministrativa</p>
+                                        </div>
                                     </div>
-                                }
-                            />
-
-                            {/* CTA Card */}
-                            <div className="bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl shadow-lg overflow-hidden card-hover text-white p-8">
-                                <h3 className="text-2xl font-bold mb-4">Pronto per iniziare?</h3>
-                                <p className="text-primary-100 mb-6 leading-relaxed">
-                                    Scrivici per raccontarci il tuo progetto e ricevere una consulenza personalizzata.
-                                </p>
-                                <a 
-                                    href="mailto:info@coomunica.it" 
-                                    className="inline-flex items-center bg-white text-primary-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-50 transition-all duration-300"
-                                >
-                                    Scrivi ora
-                                    <Mail className="w-4 h-4 ml-2" />
-                                </a>
+                                </div>
+                            </div>
+                            
+                            {/* Sede Operativa Card */}
+                            <div className="group relative overflow-hidden bg-gradient-to-br from-white to-primary-50/30 rounded-3xl p-8 border border-gray-200/50 hover:border-primary-300/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/10">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-500/10 to-primary-600/5 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
+                                <div className="relative z-10">
+                                    <div>
+                                        <h3 className="text-lg font-bold text-secondary-900 mb-3">Sede Operativa</h3>
+                                        <div className="space-y-1">
+                                            <p className="text-xl font-semibold text-secondary-800">Via Vallerotonda, 13</p>
+                                            <p className="text-lg text-secondary-600 font-medium">00178 ROMA</p>
+                                        </div>
+                                        <p className="text-sm text-secondary-500 mt-2">Qui lavoriamo ai tuoi progetti</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -107,7 +96,7 @@ const Contacts: React.FC = () => {
                                 aria-hidden="false"
                                 tabIndex={0}
                                 className="w-full"
-                            ></iframe>
+                            />
                         </div>
                     </div>
                 </div>

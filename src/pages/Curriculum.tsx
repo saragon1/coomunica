@@ -1,11 +1,9 @@
 import React from 'react';
 import { BookOpen, Award, Users, TrendingUp } from 'react-feather';
 
-const ExperienceCard: React.FC<{ icon: React.ReactNode; title: string; items: string[] }> = ({ icon, title, items }) => (
+const ExperienceCard: React.FC<{ icon: React.ReactNode; title: string; items: string[] }> = ({ title, items }) => (
     <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg card-hover border border-white/20 h-full flex flex-col">
-        <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center mb-6">
-            {icon}
-        </div>
+
         <h3 className="text-xl font-bold text-secondary-900 mb-6">{title}</h3>
         <ul className="space-y-3 flex-1">
             {items.map((item, index) => (

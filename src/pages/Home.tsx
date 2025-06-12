@@ -1,16 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Zap, Target, Users, TrendingUp } from 'react-feather';
-
-const FeatureCard: React.FC<{ icon: React.ReactNode; title: string; description: string }> = ({ icon, title, description }) => (
-    <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg card-hover border border-white/20">
-        <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center mb-6 animate-float">
-            {icon}
-        </div>
-        <h3 className="text-xl font-bold text-secondary-900 mb-4">{title}</h3>
-        <p className="text-secondary-600 leading-relaxed">{description}</p>
-    </div>
-);
+import { ArrowRight } from 'react-feather';
 
 const Home: React.FC = () => {
     return (

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Eye, ExternalLink, Folder } from 'react-feather';
+import { Eye, ExternalLink } from 'react-feather';
 import bro from '../assets/images/bro.png';
 import mag from '../assets/images/mag.png';
 import pack from '../assets/images/pack.png';

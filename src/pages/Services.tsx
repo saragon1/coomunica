@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Calendar, Radio, FileText, Globe, Video, ArrowRight } from 'react-feather';
+import { Calendar, Radio, FileText, Globe, Video } from 'react-feather';
 
-const ServiceCard: React.FC<{ icon: React.ReactNode; title: string; items: string[] }> = ({ icon, title, items }) => (
+const ServiceCard: React.FC<{ icon: React.ReactNode; title: string; items: string[] }> = ({ title, items }) => (
     <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg card-hover border border-white/20 h-full flex flex-col">
         <h3 className="text-xl font-bold text-secondary-900 mb-6">{title}</h3>
         <ul className="space-y-3 flex-1">
@@ -66,15 +65,15 @@ const Services: React.FC = () => {
 
     return (
         <div className="pt-20">
-            {/* Hero Section */}
-            <section className="relative py-24 bg-gradient-to-b from-primary-50 via-white to-gray-50 overflow-hidden">
+            <section className="py-24 bg-gradient-to-b from-primary-50 via-white to-gray-50">
+
                 {/* Background Elements */}
                 <div className="absolute top-80 left-10 w-72 h-72 bg-primary-500 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-float"></div>
                 <div className="absolute bottom-20 right-10 w-72 h-72 bg-primary-500 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-float" style={{ animationDelay: '2s' }}></div>
                 
                 <div className="relative z-10 container mx-auto px-6">
                     <div className="text-center max-w-4xl mx-auto mb-20">
-                        <h1 className="text-4xl md:text-6xl font-black text-secondary-900 mb-6 animate-slideUp">
+                        <h1 className="text-4xl md:text-6xl pt-20 font-black text-secondary-900 mb-6 animate-slideUp">
                             Dalla A alla Z,{' '}
                             <span className="gradient-text-primary-simple">
                                 zero pensieri
@@ -83,9 +82,9 @@ const Services: React.FC = () => {
                         </h1>
                         <div className="space-y-6 text-xl text-secondary-600 leading-relaxed animate-slideUp" style={{ animationDelay: '0.2s' }}>
                             <p>
-A come Advertising, Zeta come zero pensieri per te. Perché saremo noi ad occuparci di tutto. L’organizzazione del tuo evento aziendale, la strategia migliore per il tuo brand, quella brochure da riscrivere finalmente come si deve o il sito web da realizzare per farti trovare da nuovi clienti: Coomunica può supportare la tua attività in molti modi.                             </p>
+A come Advertising, Zeta come zero pensieri per te. Perché saremo noi ad occuparci di tutto. L'organizzazione del tuo evento aziendale, la strategia migliore per il tuo brand, quella brochure da riscrivere finalmente come si deve o il sito web da realizzare per farti trovare da nuovi clienti: Coomunica può supportare la tua attività in molti modi.                             </p>
                             <p>
-                            Può farla conoscere, darle valore, raccontarla al mondo esterno. Con tutte le lettere dell’alfabeto che sappiamo mettere insieme per formare parole e idee che diventano progetti da mettere a disposizione del tuo lavoro.
+                            Può farla conoscere, darle valore, raccontarla al mondo esterno. Con tutte le lettere dell'alfabeto che sappiamo mettere insieme per formare parole e idee che diventano progetti da mettere a disposizione del tuo lavoro.
                             </p>
                         </div>
                     </div>
